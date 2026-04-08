@@ -399,7 +399,7 @@
     {
       "name": "BaseLayout",
       "file": "src/layouts/BaseLayout.astro",
-      "description": "Default layout for content-focused pages. Includes Header, Footer, SEO meta tags (OpenGraph + Twitter Cards), ClientRouter for view transitions, ThemeScript for dark mode persistence, and Vercel Analytics. Content is boxed (max-w-5xl via container).",
+      "description": "Default layout for content-focused pages. Includes Header, Footer, SEO meta tags (OpenGraph + Twitter Cards), ClientRouter for view transitions, and ThemeScript for dark mode persistence. Content is boxed (max-w-5xl via container).",
       "props": {
         "title": {
           "type": "string",
@@ -434,14 +434,14 @@
           "description": "Article author name (only relevant when type='article')"
         }
       },
-      "features": ["seo", "dark-mode", "view-transitions", "skip-to-content", "analytics"],
+      "features": ["seo", "dark-mode", "view-transitions", "skip-to-content"],
       "useCases": ["Landing pages", "Blog post listing", "About/contact pages", "Documentation"],
       "notes": "Includes a visually hidden skip-to-content link for accessibility. Header and Footer are always rendered."
     },
     {
       "name": "FullWidthLayout",
       "file": "src/layouts/FullWidthLayout.astro",
-      "description": "Layout for showcase pages, portfolios, and galleries requiring full viewport width. Same structure as BaseLayout but without max-width constraint on main (w-full). Header and Footer use variant='fullWidth'. No Vercel Analytics.",
+      "description": "Layout for showcase pages, portfolios, and galleries requiring full viewport width. Same structure as BaseLayout but without max-width constraint on main (w-full). Header and Footer use variant='fullWidth'.",
       "props": {
         "title": {
           "type": "string",
@@ -462,7 +462,7 @@
       },
       "features": ["seo", "dark-mode", "view-transitions", "skip-to-content"],
       "useCases": ["Portfolios", "Showcases", "Galleries", "Full-bleed landing pages"],
-      "notes": "Does not include Vercel Analytics (unlike BaseLayout). Header and Footer receive variant='fullWidth'."
+      "notes": "Header and Footer receive variant='fullWidth'."
     },
     {
       "name": "MinimalLayout",
@@ -543,9 +543,9 @@
           "description": "Author name displayed below the title"
         }
       },
-      "features": ["seo", "dark-mode", "view-transitions", "prose-typography", "analytics"],
+      "features": ["seo", "dark-mode", "view-transitions", "prose-typography"],
       "useCases": ["Blog posts", "Documentation articles", "Changelogs"],
-      "notes": "Inherits all BaseLayout features including Vercel Analytics. Content is wrapped in prose prose-neutral dark:prose-invert — add standard HTML/Markdown; no extra styling needed."
+      "notes": "Inherits all BaseLayout features. Content is wrapped in prose prose-neutral dark:prose-invert — add standard HTML/Markdown; no extra styling needed."
     }
   ],
   "pageTemplates": [
