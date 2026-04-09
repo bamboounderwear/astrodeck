@@ -1,6 +1,9 @@
 name = "astrodeck"
 compatibility_date = "2026-04-01"
 
+[build]
+command = "npm run build"
+
 [assets]
 directory = "./dist"
 html_handling = "auto-trailing-slash"
